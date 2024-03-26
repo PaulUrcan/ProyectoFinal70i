@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "user": "luisNavas",
+      "password": "123456",
+      "mail": "lpipnavas@gmail.com",
+      "theme": "light",
+      "colorText": "dark",
+      "admin": false
+    },
+    {
+      "id": 2,
+      "user": "Santiago",
+      "password": "123456",
+      "mail": "santiago@gmail.com",
+      "theme": "light",
+      "colorText": "dark",
+      "admin": true
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "category": "cafeteria",
+      "name": "Capuchino",
+      "description": "Café con chocolate y leche",
+      "price": 1800,
+      "src": "https://cdn0.recetasgratis.net/es/posts/2/4/2/capuchino_16242_600.jpg"
+    },
+    {
+      "id": 3,
+      "category": "cafeteria",
+      "name": "Café con leche y 2 medialunas",
+      "description": "Café con leche y dos medialunas",
+      "price": 1800,
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgJ3kJX39mmUl-afSDsbXMdWfpJl6ZQQSP-bxl2KrEZg_yxOKggSdLHnXLXFxbccasxgQ&usqp=CAU"
+    },
+    {
+      "name": "Chocolate con pasas",
+      "description": "Delicioso chocalte de cacao puro",
+      "price": "1500",
+      "src": "https://acdn.mitiendanube.com/stores/002/625/145/products/pasas-choco1-d2c2ab9b7b4649b91c16793396210983-1024-1024.jpg",
+      "category": "cafeteria",
+      "id": 4
+    },
+    {
+      "name": "Licuado con tostado",
+      "description": "Rico licuado con tostado mixto, frutilla, banana",
+      "price": "10000",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ0wGkdKlpQHKHLylwjgxN73wqRB2tZhbUjNS3h2ic0FSLDQj6Q2QxHUdkZg&s",
+      "category": "cafeteria",
+      "id": 5
+    },
+    {
+      "name": "Chocolate con pasas",
+      "description": "Delicioso chocalte de cacao puro",
+      "price": "50000",
+      "src": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBQUFBgVFBQZGRgaGx0aGxkaGiEhGRobGRobGRoaGyIbIS0kGyEqHxoaJTclKi4xNDQ0GyM6PzozPi0zNDEBCwsLEA8QHxISHTMqJCszMzMzMzMzPjMzMzMzMzMzMzM1MzMxMzMzMzMzNTMzMzMzMzMzMzMzMzMzMzMzMzMzM//AABEIAKgBLAMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAFAQIDBAYAB//EAEEQAAIBAwMCBAQDBgQEBQUAAAECEQADIQQSMQVBIlFhcRMygZEGQqEjUrHB0fAUYuHxJDNDkhZTcrLCBxWCotL/xAAaAQADAQEBAQAAAAAAAAAAAAABAgMABAUG/8QALREAAgIBAwIEBAcBAAAAAAAAAAECEQMEITESQRMyUXEiM0JhFCOBkaGx8PH/2gAMAwEAAhEDEQA/ALkUsUsV0V7h82cBXAUsUtYx0UoFKKWsGhAKWKWlisGhIpYpQK6KWwnRXRS05Cs+Ix5VnKlbDGLk6QyK6KeykYPPlSRWszTQ2K6KfFdFawDIrop8V0VrMMiuinRXRWswwikinxSRRsw2KSKfFdFExFFIRUkUhFYFEZFIRUhFNIrAaGEUhFPIpCKNgojIpCKkIpCK1goiIppFSkU0ijYCOKaRUhFIRWMRkUkVIRSRWBRbpaQVwqZYdSikpRWMKKdSUooWYWlApKcK1mOpYpEdSxXcJAk549/KrVlre1j80QAfUsBgf1pZTSKwxOQ/RaVmIhe2J49zU+o0KWwql1nGSCcjknjzwPWqen17ObhVIUNCxgGeG85IjjieKs3k3Ah8xk54EGAPWYrnlJyds7IQjFUgZr9K9t5VlbMwJnaclSAI9s/zp1i6rjcvHH1HIqDqvUF04/aW9zsuGUCSR5nuJPHt50Ms625cO+2MnDKSNxPYkfKDwPOnhPsyeTHatB6KWKpW+orIV5Vj+",
+      "category": "cafeteria",
+      "id": 6
+    }
+  ]
+}
