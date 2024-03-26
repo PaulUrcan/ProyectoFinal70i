@@ -26,10 +26,10 @@ class Server{
         this.app.use(express.static("public"));   
     }
     routes(){
-  /*       this.app.use(this.authPath,require("../routes/auth")) */
+        this.app.use(this.authPath,require("../routes/auth"))
         this.app.use(this.usersPath,require("../routes/users"))
-/*         this.app.use(this.productsPathPath,require("../routes/products"))
-        this.app.use(this.categoriesPathPath,require("../routes/categories")) */
+        this.app.use(this.productsPath,require("../routes/products"))
+       /* this.app.use(this.categoriesPath,require("../routes/categories")) */
     }
     listen(){
         this.app.listen(this.port, ()=>{

@@ -16,7 +16,7 @@ const userCreate = async(req=request,res=response) => {
     let {name, mail, password, img, role, status} = req.body;
     const user = new User({name, mail, password:bcryptjs.hashSync(password,10), img, role, status});
     await user.save();
-    res.json({user, message:"Usuario creado correctamente"});
+    res.status(201).json({user, message:"Usuario creado correctamente"});
 }
 
 const userUpdate = async(req=request,res=response) =>{
