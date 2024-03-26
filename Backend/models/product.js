@@ -16,7 +16,8 @@ const ProductSchema = Schema({
         type:String,
     },
     category:{
-        type:String
+        type:String,
+        required:[true, "La categoria es obligatoria"]
     },
     stock:{
         type:Number,
