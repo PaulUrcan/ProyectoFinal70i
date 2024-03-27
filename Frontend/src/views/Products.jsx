@@ -8,7 +8,10 @@ const Products = ({products, setProducts}) => {
     const {user} = useContext(ContextUser)
   return (
     <main className='main d-flex justify-content-around align-items-center flex-wrap'>
-      {user.admin?
+        {products.map((product,i)=>{
+            return <MyCard key={i} product={product} setProducts={setProducts}/>
+        })}
+              {user.admin?
       <NavLink className='nav-link' to='/admin/agregarProducto'>
       <Button variant="success">
       <a href="/admin/agregarProducto" style={{color:'white'}}>
@@ -20,9 +23,6 @@ const Products = ({products, setProducts}) => {
       </NavLink>
       
         :''}
-        {products.map((product,i)=>{
-            return <MyCard key={i} product={product} setProducts={setProducts}/>
-        })}
     </main>
   )
 }

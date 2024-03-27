@@ -46,7 +46,7 @@ function App() {
         <BrowserRouter>
           <NavbarApp admin={user.admin} />
           <Routes>
-            <Route path='/' element={<Products products={products} />} />
+            <Route path='/' element={<Home products={products} setProducts={setProducts} />} />
             <Route path='/admin' element={<RoutesPrivates />}>
               <Route path='/admin' element={<Admin />} />
               <Route path='/admin/agregarProducto' element={<AddProduct setProducts={setProducts} />} />
