@@ -36,7 +36,7 @@ function MyCard({ product, setProducts }) {
 
   }
   return (
-    <Card style={{ width: '18rem', height: '30rem' }}>
+    <Card style={{ width: '18rem', height: '35rem' }}>
       <Card.Img variant="top" src={product.src} style={{ width: '18rem', height: '15rem' }}/>
       <Card.Body className='cards'>
         <Card.Title>{product.name}</Card.Title>

@@ -1,11 +1,14 @@
 import React from 'react'
 import Products from './Products'
+import Carrousel from '../components/Carrousel'
 
-const Home = ({products}) => {
+const Home = ({ products }) => {
+  console.log(products)
   return (
-    <>
-      <Products products={products}/>
-    </>
+    <div className='d-flex flex-column overflow-y-hidden '>
+      <Carrousel />
+      <Products products={products} />
+    </div>
   )
 }
 

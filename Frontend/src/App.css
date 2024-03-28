@@ -12,6 +12,11 @@ html{
   width: 100vw; 
   background-color: #caf0f8;
 }
+
+.bg{
+  background-color: #4cd0eb;
+}
+
 .link{
   text-decoration: none;
 }
