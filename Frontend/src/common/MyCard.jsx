@@ -5,9 +5,10 @@ import { useContext } from 'react'
 import ContextUser from '../components/ContextUser';
 import { deleteProduct, getProducts } from '../utils/index'
 import Swal from 'sweetalert2';
-function MyCard({ product, setProducts }) {
+function MyCard({ product, setProducts, handleBuy, handleFav}) {
   const { user } = useContext(ContextUser);
   const navigate = useNavigate();
+  
   const eliminar = (id) => {
     Swal.fire({
       title: "Deseas eliminar el producto?",
@@ -33,17 +34,16 @@ function MyCard({ product, setProducts }) {
     })
     /* Read more about isConfirmed, isDenied below */
 
-
+    console.log(handleFav())
   }
   return (
-    <Card style={{ width: '18rem', height: '35rem' }}>
-      <Card.Img variant="top" src={product.src} style={{ width: '18rem', height: '15rem' }}/>
-      <Card.Body className='cards'>
+    <Card className='my-5' style={{ width: '18rem', height: '30rem' }}>
+      <div className='mt-1' style={{ width: '18rem', height: '15rem' }}>
+      <Card.Img variant="top" src={product.src}/>
+      </div>
+      <Card.Body className='cards d-flex flex-column  justify-content-between '>
         <Card.Title>{product.name}</Card.Title>
-        <Card.Text>
-          {product.description}
-        </Card.Text>
-        <div className='d-flex flex-column'>
+        <div className='d-flex flex-column '>
           <Button className='my-2' variant="primary">
             <NavLink className='nav-link' to={`/admin/detalleProducto/${product.id}`}>
               Ver detalle
@@ -58,7 +58,10 @@ function MyCard({ product, setProducts }) {
                 Eliminar
               </NavLink>
             </Button>
-          </> : ''}
+          </> : <div className='d-flex flex-row gap-1 col-12'>
+          <Button variant="success" onClick={() => handleBuy(product)}>{product.bought ? 'Quitar del carrito' : 'Añadir al carrito'}</Button>
+          <Button variant="warning" onClick={() => handleFav(product)}>{product.fav ? 'Quitar de favoritos' : 'Añadir a favoritos'}</Button>
+          </div>}
         </div>
       </Card.Body>
     </Card>

@@ -13,8 +13,12 @@ html{
   background-color: #caf0f8;
 }
 
-.bg{
+.bg-carousel{
   background-color: #4cd0eb;
+}
+
+.bg{
+  background-color: #caf0f8;  
 }
 
 .link{
@@ -27,4 +31,38 @@ html{
 
 .cards{
   background-color: #90e0ef;
+}
+
+/* CategorySlider */
+
+.burger-menu{
+  position: relative;
+}
+
+.burger-menu .cat {
+  transition: all 0.3s ease-in-out;
+}
+
+.burger-menu .d-flex {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.burger-menu.open .d-flex {
+  max-height: 200px; /* o el valor deseado */
+}
+
+.burger-menu .hide {
+  display: none;
+}
+
+.burger-menu .show {
+  display: block;
+}
+
+.cat-btn:hover{
+  transition: all 0.3s ease-in;
+  background-color: #033753;
+  color: white;
 }

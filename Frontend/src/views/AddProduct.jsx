@@ -113,10 +113,9 @@ const AddProduct = ({setProducts}) => {
                         type="text"
                         {...register("category", { required: "Este campo es obligatorio" })}
                     >
-                        <option value='zapatillas'>Zapatillas</option>
-                        <option value='botines'>Botines</option>
-                        <option value='botas'>Botas</option>
-                        <option value='sandalias'>Sandalias</option>
+                        <option value='Zapatillas'>Zapatillas</option>
+                        <option value='Botas'>Botas</option>
+                        <option value='Sandalias'>Sandalias</option>
                     </Form.Select>
                     <Form.Text>
                         {errors.category?.message}
