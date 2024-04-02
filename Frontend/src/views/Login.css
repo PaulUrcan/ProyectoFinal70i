@@ -1,42 +1,39 @@
-/* Login.css */
-
-/* Estilos personalizados para el modal de inicio de sesión */
-
 .custom-modal {
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  background-color: rgba(0, 0, 0, 0.5);
+  
 }
 
 .custom-modal-dialog {
-  max-width: 400px; /* Ancho máximo del modal */
-  margin: 100px auto; /* Margen superior e inferior automático y centrado horizontalmente */
+  max-width: 400px; 
+  margin: 100px auto;
 }
 
 .custom-modal-content {
-  background-color: #fff; /* Color de fondo del modal */
-  border-radius: 10px; /* Borde redondeado */
-  padding: 20px; /* Espaciado interno */
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 .custom-modal-title {
-  color: #333; /* Color del título */
+  color: #333;
 }
 
-/* Estilos para el formulario de inicio de sesión */
+
 .custom-form-label {
-  color: #333; /* Color de las etiquetas del formulario */
+  color: #333;
 }
 
 .custom-form-control {
-  border-color: #ccc; /* Color del borde del campo de entrada */
+  border-color: #ccc;
 }
 
 .custom-modal-button {
-  background-color: #007bff; /* Color de fondo del botón */
-  border-color: #007bff; /* Color del borde del botón */
-  color: #fff; /* Color del texto del botón */
+  background-color: #0f9ac1;
+  border-color: #0f9ac1;
+  color: #fff;
+  margin:10px 0 0;
 }
 
 .custom-modal-button:hover {
-  background-color: #0056b3; /* Cambio de color de fondo al pasar el ratón sobre el botón */
-  border-color: #0056b3; /* Cambio de color del borde al pasar el ratón sobre el botón */
+  background-color: #0056b3;
 }

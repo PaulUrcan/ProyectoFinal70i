@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Button, Form, FormControl, FormGroup, Modal } from "react-bootstrap";
+import { Button, Form, FormControl, FormGroup, Modal, Row, Col } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import bcrypt from "bcryptjs-react";
 import UserContext from "../components/ContextUser";
@@ -42,31 +42,38 @@ const Login = ({ show, handleClose }) => {
           <Modal.Title className="custom-modal-title">Iniciar Sesión</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form onSubmit={handleSubmit(login)} className="custom-form">
-            <FormGroup>
-              <Form.Label className="custom-form-label">Email</Form.Label>
-              <FormControl
-                type="text"
-                {...register("mail", { required: "Este campo es obligatorio" })}
-                className="custom-form-control"
-              />
-              <Form.Text>{errors.mail?.message}</Form.Text>
-            </FormGroup>
-            <FormGroup>
-              <Form.Label className="custom-form-label">Contraseña</Form.Label>
-              <FormControl
-                type="password"
-                {...register("password", { required: "Este campo es obligatorio" })}
-                className="custom-form-control"
-              />
-              <Form.Text>{errors.password?.message}</Form.Text>
-            </FormGroup>
-            <FormGroup>
-              <Button variant="primary" type="submit" className="custom-modal-button">
-                Ingresar
-              </Button>
-            </FormGroup>
-          </Form>
+          <Row>
+            <Col md={6} order={2}>
+              <Form onSubmit={handleSubmit(login)} className="custom-form">
+                <FormGroup>
+                  <Form.Label className="custom-form-label">Email</Form.Label>
+                  <FormControl
+                    type="text"
+                    {...register("mail", { required: "Este campo es obligatorio" })}
+                    className="custom-form-control"
+                  />
+                  <Form.Text>{errors.mail?.message}</Form.Text>
+                </FormGroup>
+                <FormGroup>
+                  <Form.Label className="custom-form-label">Contraseña</Form.Label>
+                  <FormControl
+                    type="password"
+                    {...register("password", { required: "Este campo es obligatorio" })}
+                    className="custom-form-control"
+                  />
+                  <Form.Text>{errors.password?.message}</Form.Text>
+                </FormGroup>
+                <FormGroup>
+                  <Button variant="primary" type="submit" className="custom-modal-button">
+                    Ingresar
+                  </Button>
+                </FormGroup>
+              </Form>
+            </Col>
+            <Col md={6} order={1} className="d-none d-md-block">
+              <img src="Frontend/src/assets/imagenLogin.png" alt="Imagen" className="img-fluid" />
+            </Col>
+          </Row>
         </Modal.Body>
       </Modal>
     </>

@@ -3,7 +3,7 @@ import { Navbar, Nav, Button } from 'react-bootstrap';
 import logo from '../assets/react.svg';
 import { NavLink, Navigate } from 'react-router-dom';
 import UserContext from '../components/ContextUser';
-import Login from '../views/Login'; // Importa el componente Login
+import Login from '../views/Login'; 
 
 const NavbarApp = ({ handleLoginModal }) => {
   const { user } = useContext(UserContext);
@@ -17,10 +17,10 @@ const NavbarApp = ({ handleLoginModal }) => {
     });
   };
 
-  const [showLoginModal, setShowLoginModal] = useState(false); // Estado para controlar la visibilidad del modal
+  const [showLoginModal, setShowLoginModal] = useState(false); 
 
-  const handleShowLoginModal = () => setShowLoginModal(true); // Función para mostrar el modal
-  const handleCloseLoginModal = () => setShowLoginModal(false); // Función para cerrar el modal
+  const handleShowLoginModal = () => setShowLoginModal(true); 
+  const handleCloseLoginModal = () => setShowLoginModal(false);
 
   return (
     <Navbar className="d-flex justify-content-center text-white" bg="#0077b6">
@@ -31,7 +31,7 @@ const NavbarApp = ({ handleLoginModal }) => {
         <NavLink className="nav-link" to="/nosotros">
           Nosotros
         </NavLink>
-        <Button className="nav-link" onClick={handleShowLoginModal}>Ingresar</Button> {/* Botón para mostrar el modal de login */}
+        <Button className="nav-link" onClick={handleShowLoginModal}>Ingresar</Button>
         
         {user.admin ? (
           <>
@@ -53,7 +53,7 @@ const NavbarApp = ({ handleLoginModal }) => {
         )}
       </Nav>
 
-      {/* Modal de login */}
+      
       <Login show={showLoginModal} handleClose={handleCloseLoginModal} />
     </Navbar>
   );
