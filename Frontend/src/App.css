@@ -68,48 +68,8 @@ html{
   color: white;
 }
 
-/* Grilla de productos */
+/* Footer */
 
-@media (min-width: 992px) {
-  .product-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .product-col {
-    flex: 0 0 20%; /* 5 productos por fila */
-    max-width: 20%;
-    padding: 0 15px;
-    margin-bottom: 30px;
-  }
-}
-
-/* Estilos para tablet */
-@media (max-width: 991px) {
-  .product-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .product-col {
-    flex: 0 0 33.33%; /* 3 productos por fila */
-    max-width: 33.33%;
-    padding: 0 15px;
-    margin-bottom: 30px;
-  }
-}
-
-/* Estilos para dispositivos móviles */
-@media (max-width: 767px) {
-  .product-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .product-col {
-    flex: 0 0 50%; /* 2 productos por fila */
-    max-width: 50%;
-    padding: 0 15px;
-    margin-bottom: 30px;
-  }
+.footer-text{
+  font-size: large;
 }

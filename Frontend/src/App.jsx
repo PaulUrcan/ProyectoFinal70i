@@ -4,7 +4,6 @@ import Footer from './common/Footer'
 import NavbarApp from './common/NavbarApp';
 import Home from './views/Home'
 import ErrorScreen from './views/ErrorScreen';
-import About from './views/About'
 import { getProducts } from './utils'
 import { useEffect, useState } from 'react';
 import RoutesPrivates from './routes/RoutesPrivates';
@@ -33,8 +32,6 @@ function App() {
     setProducts(data);
   }
   useEffect(() => {
-    // Al momento en que se monta el componente
-    // setProducts()
     getData()
 
 
@@ -54,8 +51,6 @@ function App() {
               <Route path='/admin/detalleProducto/:id' element={<DetailProduct />} />
               <Route path='/admin/modificarProducto/:id' element={<UpdateProduct products={products} setProducts={setProducts} />} />
             </Route>
-            <Route path='/nosotros' element={<About />} />
-            {/* Enviar una función como props */}
             <Route path='/ingresar' element={<Login />} />
             <Route path='/*' element={<ErrorScreen />} />
           </Routes>

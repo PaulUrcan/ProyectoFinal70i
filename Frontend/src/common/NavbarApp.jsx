@@ -1,6 +1,5 @@
 import {useContext, useEffect} from 'react'
 import {Navbar,Nav} from 'react-bootstrap';
-import logo from '/logo.svg'
 import { Link, NavLink} from "react-router-dom";
 import UserContext from '../components/ContextUser';
 
@@ -20,13 +19,10 @@ const NavbarApp = () => {
     <Navbar className='d-flex justify-content-center text-white' bg="#0077b6" >
         <Nav className='me-auto'>
             <Link className='navbar-branch' to="/">
-                <img src={logo} alt="" />
+                <img src="logo.png" alt="" width={50}/>
             </Link>
             <NavLink className='nav-link' to='/'>
             Inicio
-            </NavLink>
-            <NavLink className='nav-link' to='/nosotros'>
-            Nosotros
             </NavLink>
             <NavLink className='nav-link' to='/ingresar'>
             Ingresar
