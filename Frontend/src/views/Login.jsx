@@ -5,6 +5,7 @@ import bcrypt from "bcryptjs-react";
 import UserContext from "../components/ContextUser";
 import { getUsers } from "../utils";
 import './Login.css'; 
+import loguito from '../assets/imagenLogin.png';
 
 const Login = ({ show, handleClose }) => {
   const { setUser } = useContext(UserContext);
@@ -71,7 +72,7 @@ const Login = ({ show, handleClose }) => {
               </Form>
             </Col>
             <Col md={6} order={1} className="d-none d-md-block">
-              <img src="Frontend/src/assets/imagenLogin.png" alt="Imagen" className="img-fluid" />
+              <img src={loguito} alt="Imagen" className="img-fluid" />
             </Col>
           </Row>
         </Modal.Body>
