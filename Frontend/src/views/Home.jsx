@@ -34,15 +34,17 @@ const Home = ({ products, setProducts }) => {
     
   }
   return (
-    <div className='d-flex flex-column overflow-y-hidden '>
+    <div className='d-flex flex-column  overflow-x-hidden  '>
       <Carrousel />
       <CategorySlider
         categories={categories}
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory} 
       />
-      <div className='d-flex flex-row'>
+      <div className='d-flex flex-row main'>
+      <div className='col-lg-2 col-md-3 col-sm-6 mb-4'>
         <Products products={filteredProducts} handleBuy={handleBuy} handleFav={handleFav}  />
+        </div>
       </div>
       
     </div>

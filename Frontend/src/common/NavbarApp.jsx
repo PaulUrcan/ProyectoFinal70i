@@ -1,12 +1,16 @@
+
 import React, { useContext, useState } from 'react';
 import { Navbar, Nav, Button } from 'react-bootstrap';
 import logo from '../assets/react.svg';
 import { NavLink, Navigate } from 'react-router-dom';
+import {useContext, useEffect} from 'react'
+import {Navbar,Nav} from 'react-bootstrap';
+import { Link, NavLink} from "react-router-dom";
 import UserContext from '../components/ContextUser';
 import Login from '../views/Login'; 
 
 const NavbarApp = ({ handleLoginModal }) => {
-  const { user } = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
   const logout = () => {
     setUser({
       "id": 0,
@@ -37,6 +41,20 @@ const NavbarApp = ({ handleLoginModal }) => {
           <>
             <NavLink className="nav-link" to="/admin">
               Administrador
+    <Navbar className='d-flex justify-content-center text-white' bg="#0077b6" >
+        <Nav className='me-auto'>
+            <Link className='navbar-branch' to="/">
+                <img src="logo.png" alt="" width={50}/>
+            </Link>
+            <NavLink className='nav-link' to='/'>
+            Inicio
+            </NavLink>
+            <NavLink className='nav-link' to='/ingresar'>
+            Ingresar
+            </NavLink>
+            {user.admin?<>
+              <NavLink className='nav-link' to='/admin'>
+            Administrador
             </NavLink>
             <NavLink className="nav-link" to="/admin/agregarProducto">
               Agregar Producto
