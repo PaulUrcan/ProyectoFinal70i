@@ -49,7 +49,8 @@ const AddProduct = ({setProducts}) => {
 
     }
     return (
-        <div className="d-flex justify-content-around align-items-center main">
+        <div className="d-flex flex-column justify-content-around align-items-center main position-absolute overflow-hidden">
+            <h1>Agregar Productos</h1>
             <Form className="w-50" onSubmit={handleSubmit(addItem)} method="POST">
                 <FormGroup>
                     <Form.Label>
@@ -112,10 +113,9 @@ const AddProduct = ({setProducts}) => {
                         type="text"
                         {...register("category", { required: "Este campo es obligatorio" })}
                     >
-                        <option value='zapatillas'>Zapatillas</option>
-                        <option value='botines'>Botines</option>
-                        <option value='botas'>Botas</option>
-                        <option value='sandalias'>Sandalias</option>
+                        <option value='Zapatillas'>Zapatillas</option>
+                        <option value='Botas'>Botas</option>
+                        <option value='Sandalias'>Sandalias</option>
                     </Form.Select>
                     <Form.Text>
                         {errors.category?.message}
@@ -133,7 +133,7 @@ const AddProduct = ({setProducts}) => {
                         {errors.stock?.message}
                     </Form.Text>
                 </FormGroup>
-                <FormGroup>
+                <FormGroup className="mt-3 d-flex justify-content-end ">
                     <Button type="submit">Agregar producto</Button>
                 </FormGroup>
             </Form>

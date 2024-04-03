@@ -1,7 +1,7 @@
 const Product = require("../models/product")
 
 const getProducts = async (req,res)=>{
-    const {limit=5,from=0} = req.query;
+    const {limit=100,from=0} = req.query;
     const products = await Product.find().skip(Number(from)).limit(Number(limit));
     res.json({products})
 }

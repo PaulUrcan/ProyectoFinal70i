@@ -1,68 +1,62 @@
-import {useContext, useEffect} from 'react'
-import {Navbar,Nav} from 'react-bootstrap';
-import logo from '/logo.svg'
-import { Link, NavLink} from "react-router-dom";
+import React, { useContext, useState } from 'react';
+import { Navbar, Nav, Button } from 'react-bootstrap';
+import logo from '../assets/react.svg';
+import { NavLink, Navigate } from 'react-router-dom';
 import UserContext from '../components/ContextUser';
+import Login from '../views/Login'; 
 
-import MyButton from '../components/MyButton'
-const NavbarApp = () => {
-  const {user,setUser}=useContext(UserContext);
-  const logout=()=>{
+const NavbarApp = ({ handleLoginModal }) => {
+  const { user } = useContext(UserContext);
+  const logout = () => {
     setUser({
       "id": 0,
       "user": "",
       "password": "",
       "email":"",
-      "admin":false,
-      "theme":"light",
-      "colorText":"dark"
+      "admin":false
     });
-  }
-  useEffect(() => {
-    console.log(" se rendizó el componente");
-  
- 
-  }, [])
-  
+  };
+
+  const [showLoginModal, setShowLoginModal] = useState(false); 
+
+  const handleShowLoginModal = () => setShowLoginModal(true); 
+  const handleCloseLoginModal = () => setShowLoginModal(false);
 
   return (
-    <Navbar className='d-flex justify-content-center text-white' bg={user.theme} data-bs-theme={user.theme} >
-        <Nav className='me-auto'>
-            <Link className='navbar-branch' to="/">
-                <img src={logo} alt="" />
-            </Link>
-            <NavLink className='nav-link' to='/'>
-            Inicio
+    <Navbar className="d-flex justify-content-center text-white" bg="#0077b6">
+      <Nav className="me-auto">
+        <NavLink className="nav-link" to="/">
+          Inicio
+        </NavLink>
+        <NavLink className="nav-link" to="/nosotros">
+          Nosotros
+        </NavLink>
+        <Button className="nav-link" onClick={handleShowLoginModal}>Ingresar</Button>
+        
+        {user.admin ? (
+          <>
+            <NavLink className="nav-link" to="/admin">
+              Administrador
             </NavLink>
-            <NavLink className='nav-link' to='/nosotros'>
-            Nosotros
+            <NavLink className="nav-link" to="/admin/agregarProducto">
+              Agregar Producto
             </NavLink>
-            <NavLink className='nav-link' to='/ingresar'>
-            Ingresar
+            <NavLink className="nav-link" to="/admin/productos">
+              Administrar productos
             </NavLink>
-            <NavLink className='nav-link'>
-              <MyButton />
+            <NavLink className="nav-link" onClick={logout}>
+              Salir
+            </NavLink>
+          </>
+        ) : (
+          ''
+        )}
+      </Nav>
 
-            </NavLink>
-            
-            {user.admin?<>
-              <NavLink className='nav-link' to='/admin'>
-            Administrador
-            </NavLink>
-            <NavLink className='nav-link' to='/admin/agregarProducto'>
-            Agregar Producto
-            </NavLink>
-            <NavLink className='nav-link' to='/admin/productos'>
-            Administrar productos
-            </NavLink>
-            <NavLink className='nav-link' onClick={logout}>
-            Salir
-            </NavLink>
-            </>:""}
-        </Nav>
-
+      
+      <Login show={showLoginModal} handleClose={handleCloseLoginModal} />
     </Navbar>
-  )
-}
+  );
+};
 
-export default NavbarApp
+export default NavbarApp;

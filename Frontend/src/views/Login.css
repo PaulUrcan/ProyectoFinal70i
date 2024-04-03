@@ -1,0 +1,39 @@
+.custom-modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  
+}
+
+.custom-modal-dialog {
+  max-width: 400px; 
+  margin: 100px auto;
+}
+
+.custom-modal-content {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.custom-modal-title {
+  color: #333;
+}
+
+
+.custom-form-label {
+  color: #333;
+}
+
+.custom-form-control {
+  border-color: #ccc;
+}
+
+.custom-modal-button {
+  background-color: #90e0ef;
+  border-color: #0f9ac1;
+  color: #fff;
+  margin:10px 0 0;
+}
+
+.custom-modal-button:hover {
+  background-color: #00b4d8;
+}
