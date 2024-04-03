@@ -54,6 +54,15 @@ export const addUser=async(obj)=>{
 
 }
 
+export const resetPassword = async (email) => {
+    try {
+      const response = await axios.post(URLuser+"/resetPassword", { email });
+      return response.data.message;
+    } catch (error) {
+      throw error.response.data.error;
+    }
+  };
+
 export const addProduct=async(obj)=>{
     console.log(obj);
     try {
@@ -106,22 +115,10 @@ export const updateProduct=async(id,obj)=>{
 export const deleteProduct=async(id)=>{
     try {
         let product= await axios.delete(`${URLproducts}/deleteProduct/${id}`)
-        // if (product.status===201) {
-        //     console.log(product)
-        //     return product.data
-            
-        // }else{
-        //     return null
-        // }
-        console.log(product)
-        console.log(id)
+  
+        
     } catch (error) {
        
         return null
     }
 }
-
-// addUser({name:"Juan", mail:"Juan@gmail.com", password:"password", img:"url", role:"admin", status:"true"})
-// .then((result)=>{
-//     return result.json()
-// }).then((data)=>{console.log(data)})

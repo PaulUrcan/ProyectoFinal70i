@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Button, Form, FormControl, FormGroup, Modal, Row, Col } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import bcrypt from "bcryptjs-react";
@@ -6,10 +6,12 @@ import UserContext from "../components/ContextUser";
 import { getUsers } from "../utils";
 import './Login.css'; 
 import loguito from '../assets/imagenLogin.png';
+//import ResetPasswordForm from './ResetPasswoordForm'
 
 const Login = ({ show, handleClose }) => {
   const { setUser } = useContext(UserContext);
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
+  const [showResetPasswordForm, setShowResetPasswordForm] = useState(false);
 
   const login = async (user) => {
     let users = await getUsers();
@@ -34,6 +36,10 @@ const Login = ({ show, handleClose }) => {
       setUser(objUser);
       handleClose();
     }
+  };
+
+  const handleForgotPassword = () => {
+    setShowResetPasswordForm(true);
   };
 
   return (
@@ -70,6 +76,11 @@ const Login = ({ show, handleClose }) => {
                   </Button>
                 </FormGroup>
               </Form>
+              <Button className="link" variant="link" /*</Col>onClick={handleForgotPassword}*/>
+                ¿Olvidaste tu contraseña?
+              </Button>
+              
+              {showResetPasswordForm && <ResetPasswordForm />}
             </Col>
             <Col md={6} order={1} className="d-none d-md-block">
               <img src={loguito} alt="Imagen" className="img-fluid" />
@@ -79,7 +90,6 @@ const Login = ({ show, handleClose }) => {
       </Modal>
     </>
   );
-
 };
 
 export default Login;
