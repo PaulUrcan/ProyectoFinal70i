@@ -23,7 +23,7 @@ const CategorySlider = ({ categories, selectedCategory, setSelectedCategory }) =
                 <button className=' px-md-5  cat rounded-2 footer text-white border-white border-1 cat-btn' onClick={toggleMenu}>
                     Categorías
                 </button>
-                <div className={`d-flex flex-column w-25 cat position-absolute ${menuOpen ? 'show' : 'hide'}`}>
+                <div className={`d-flex flex-column cat position-absolute ${menuOpen ? 'show' : 'hide'}`}>
                     <button
                         key="all"
                         className={selectedCategory === null ? 'active rounded-2 text-black border-white border-1' : 'rounded-2 footer text-white border-white border-1 cat-btn'}
