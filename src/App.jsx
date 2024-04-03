@@ -9,7 +9,6 @@ import { useEffect, useState } from 'react';
 import RoutesPrivates from './routes/RoutesPrivates';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AddProduct from './views/AddProduct'
-import Admin from './views/Admin';
 import Login from './views/Login';
 import ContextUser from './components/ContextUser';
 import Products from './views/Products';
@@ -46,7 +45,6 @@ function App() {
           <Routes>
             <Route path='/' element={<Home products={products} setProducts={setProducts} />} />
             <Route path='/admin' element={<RoutesPrivates />}>
-              <Route path='/admin' element={<Admin />} />
               <Route path='/admin/agregarProducto' element={<AddProduct setProducts={setProducts} />} />
               <Route path='/admin/productos' element={<Products products={products} setProducts={setProducts} />} />
               <Route path='/admin/detalleProducto/:id' element={<DetailProduct />} />

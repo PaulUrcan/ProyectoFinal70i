@@ -29,16 +29,10 @@ const NavbarApp = ({ handleLoginModal }) => {
         <NavLink className="nav-link" to="/">
           Inicio
         </NavLink>
-        <NavLink className="nav-link" to="/nosotros">
-          Nosotros
-        </NavLink>
         <NavLink className='nav-link' onClick={handleShowLoginModal}> Ingresar </NavLink>
 
         {user.admin ? (
           <>
-            <NavLink className="nav-link" to="/admin">
-              Administrador
-            </NavLink>
             <NavLink className="nav-link" to="/admin/agregarProducto">
               Agregar Producto
             </NavLink>

@@ -49,7 +49,7 @@ const AddProduct = ({setProducts}) => {
 
     }
     return (
-        <div className="d-flex flex-column justify-content-around align-items-center main position-absolute overflow-hidden">
+        <div className="d-flex flex-column justify-content-around align-items-center main overflow-hidden">
             <h1>Agregar Productos</h1>
             <Form className="w-50" onSubmit={handleSubmit(addItem)} method="POST">
                 <FormGroup>
