@@ -15,6 +15,7 @@ import ContextUser from './components/ContextUser';
 import Products from './views/Products';
 import DetailProduct from './views/DetailProduct';
 import UpdateProduct from './views/UpdateProduct'
+import RegisterModal from './views/RegisterModal';
 function App() {
   const [products, setProducts] = useState([]);
   const [user, setUser] = useState({
@@ -52,6 +53,7 @@ function App() {
               <Route path='/admin/modificarProducto/:id' element={<UpdateProduct products={products} setProducts={setProducts} />} />
             </Route>
             <Route path='/ingresar' element={<Login />} />
+            <Route path='/registro' element={<RegisterModal/>}/>
             <Route path='/*' element={<ErrorScreen />} />
           </Routes>
           <Footer />
